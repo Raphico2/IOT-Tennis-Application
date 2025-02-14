@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".TennisProfile">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <!-- Haut de la page -->
+                <LinearLayout
+                    android:id="@+id/firstLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="154dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                        <Button
+                            android:id="@+id/back_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="start"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/blue"
+                            android:text="return" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="190dp"
+                            android:layout_height="142dp"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ranking" />
+
+                </LinearLayout>
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/bar_chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="266dp"
+                    android:layout_below="@+id/firstLinearLayout"
+                    android:background="@color/white">
+
+                </com.github.mikephil.charting.charts.BarChart>
+
+                <LinearLayout
+                    android:id="@+id/secondLinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="154dp"
+                    android:layout_below="@+id/bar_chart"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+
+                        <EditText
+                            android:id="@+id/text_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:gravity="center"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/blue"
+                            android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/fragment_profile_tennis"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

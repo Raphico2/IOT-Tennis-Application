@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".TennisStats">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Haut de la page -->
+        <LinearLayout
+            android:id="@+id/firstLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/back_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/blue"
+                android:text="return" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="190dp"
+                android:layout_height="142dp"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/stats" />
+
+        </LinearLayout>
+
+        <!-- text introduction -->
+        <LinearLayout
+            android:id="@+id/secondLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstLinearLayout"
+            android:layout_weight="1"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Your stats:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+        <!-- button stat visualisation strike number -->
+        <LinearLayout
+            android:id="@+id/visualisation1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/secondLinearLayout"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/stroke_number"
+                android:layout_width="231dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="total number of strokes"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/display_strike_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="@color/blue"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <!-- button stat visualisation forehand number -->
+        <LinearLayout
+            android:id="@+id/visualisation2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visualisation1"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/forehand_number"
+                android:layout_width="231dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="total number of forehand"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/display_forehand_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="@color/blue"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <!-- button stat visualisation backhand number -->
+        <LinearLayout
+            android:id="@+id/visualisation3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visualisation2"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/backhand_number"
+                android:layout_width="231dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="total number of backhand"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/display_backhand_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="@color/blue"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <!-- button stat visualisation mean speed -->
+        <LinearLayout
+            android:id="@+id/visualisation4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visualisation3"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mean_speed"
+                android:layout_width="231dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="average ball speed "
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/display_mean_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="@color/blue"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+        <!-- button stat visualisation max ball speed -->
+        <LinearLayout
+            android:id="@+id/visualisation5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visualisation4"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/max_speed"
+                android:layout_width="231dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="maxmimum ball speed"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/display_max_speed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="@color/blue"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <!-- button stat visualisation mean exchanges -->
+        <LinearLayout
+            android:id="@+id/visualisation6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visualisation5"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/mean_exchange"
+                android:layout_width="231dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="average number of strokes during a rally"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/display_mean_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="@color/blue"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <!-- button stat visualisation max exchanges -->
+        <LinearLayout
+            android:id="@+id/visualisation7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/visualisation6"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/max_exchanges"
+                android:layout_width="231dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="maximum number of strokes during a rally"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="18dp"
+                android:layout_height="match_parent" />
+
+            <EditText
+                android:id="@+id/display_max_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:textColor="@color/blue"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/fragment_stat_tennis"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
